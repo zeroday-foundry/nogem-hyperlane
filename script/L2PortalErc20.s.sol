@@ -2,16 +2,11 @@
 pragma solidity ^0.8.13;
 
 import {Script, console2} from "forge-std/Script.sol";
-import "../src/L2PortalHypNFT721.sol";
+import "../src/L2PortalHypErc20.sol";
 
-/**
- * @author L2Portal
- * @title L2PortalHypNFT721Script
- * @notice Deploy script for {L2PortalHypNFT721}
- */
-contract L2PortalHypNFT721Script is Script {
+contract HyprErc20Script is Script {
     function run() public {
-        //POLYGON
+        uint8 decimals = 18;
         address mailbox = 0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766;
         uint256 startMintId = 1000001;
         uint256 endMintId = 1500000;
@@ -22,7 +17,8 @@ contract L2PortalHypNFT721Script is Script {
 
         vm.broadcast();
 
-        NogemHyper L2portal = new NogemHyper(
+        NogemHyperErc20 erc20 = new NogemHyperErc20(
+            decimals,
             mailbox,
             startMintId,
             endMintId,

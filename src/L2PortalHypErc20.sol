@@ -1,27 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.13;
 
-import "@hyperlane/contracts/token/HypERC721.sol";
+import "@hyperlane/contracts/token/HypERC20.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
-contract NogemHyper is HypERC721, ReentrancyGuard {
-    /************
-     *   ERRORS *
-     ************/
-    /**
-     * @notice Contract error codes, used to specify the error
-     * CODE LIST:
-     * E1    "Invalid token URI lock state"
-     * E2    "Mint exceeds the limit"
-     * E3    "Invalid mint fee"
-     * E4    "Invalid token ID"
-     * E5    "Invalid fee collector address"
-     * E6    "Invalid earned fee amount: nothing to claim"
-     * E7    "Caller is not a fee collector"
-     * E8    "Invalid referral bips: value is too high"
-     * E9    "Invalid referer address"
-     */
-
+contract NogemHyperErc20 is HypERC20, ReentrancyGuard {
     uint8 public constant ERROR_INVALID_URI_LOCK_STATE = 1;
     uint8 public constant ERROR_MINT_EXCEEDS_LIMIT = 2;
     uint8 public constant ERROR_MINT_INVALID_FEE = 3;
@@ -32,12 +15,7 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
     uint8 public constant ERROR_REFERRAL_BIPS_TOO_HIGH = 8;
     uint8 public constant ERROR_INVALID_REFERER = 9;
 
-    /**
-     * @notice Basic error, thrown every time something goes wrong according to the contract logic.
-     * @dev The error code indicates more details.
-     */
-    error L2PortalHypNFT721_CoreError(uint256 errorCode);
-
+    error HypToken_CoreError(uint256 errorCode);
     /************
      *   EVENTS  *
      ************/
@@ -75,9 +53,6 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
     );
     event TokenURILocked(bool indexed newState);
 
-    /**
-     * Mint / bridge / claim
-     */
     event ONFTMinted(
         address indexed minter,
         uint256 indexed itemId,
@@ -98,18 +73,9 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
         uint256 claimedAmount
     );
 
-    /***************
-     *   CONSTANTS  *
-     ***************/
     uint256 public constant ONE_HUNDRED_PERCENT = 10000; // 100%
     uint256 public constant FIFTY_PERCENT = 5000; // 50%
     uint256 public constant DENOMINATOR = ONE_HUNDRED_PERCENT; // 100%
-
-    /***********************
-     *   VARIABLES / STATES *
-     ***********************/
-
-    /// TOKEN ID ///
     uint256 public immutable startMintId;
     uint256 public immutable maxMintId;
 
@@ -134,13 +100,6 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
     string private _tokenBaseURI;
     bool public tokenBaseURILocked;
 
-    /***************
-     *   MODIFIERS  *
-     ***************/
-
-    /**
-     * @dev Protects functions available only to the fee collector, e.g. fee claiming
-     */
     modifier onlyFeeCollector() {
         _checkFeeCollector();
         _;
@@ -158,7 +117,9 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
      * @param _bridgeFee fee amount to be sent as part of the value message when calling the mint function
      * @param _feeCollector the address to which the fee claiming is authorized
      */
+
     constructor(
+        uint8 _decimals,
         address _mailbox,
         uint256 _startMintId,
         uint256 _endMintId,
@@ -166,7 +127,7 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
         uint256 _bridgeFee,
         address _feeCollector,
         uint256 _referralEarningBips
-    ) HypERC721(_mailbox) {
+    ) HypERC20(_decimals, _mailbox) {
         require(_startMintId < _endMintId, "Invalid mint range");
         require(_endMintId < type(uint256).max, "Incorrect max mint ID");
         require(_feeCollector != address(0), "Invalid fee collector address");
@@ -181,43 +142,21 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
         feeCollector = _feeCollector;
         referralEarningBips = _referralEarningBips;
         tokenCounter = _startMintId;
-        init("L2PortalHypNFT", "HL2PT");
+        init("Nogem Token", "NGGT");
     }
 
-    /***********************
-     *   SETTERS / GETTERS  *
-     ***********************/
-
-    /**
-     * @notice ADMIN Change minting fee
-     * @param _mintFee new minting fee
-     *
-     * @dev emits {NogemHyper-MintFeeChanged}
-     */
     function setMintFee(uint256 _mintFee) external onlyOwner {
         uint256 oldMintFee = mintFee;
         mintFee = _mintFee;
         emit MintFeeChanged(oldMintFee, _mintFee);
     }
 
-    /**
-     * @notice ADMIN Change bridge fee
-     * @param _bridgeFee new bridge fee
-     *
-     * @dev emits {NogemHyper-BridgeFeeChanged}
-     */
     function setBridgeFee(uint256 _bridgeFee) external onlyOwner {
         uint256 oldBridgeFee = bridgeFee;
         bridgeFee = _bridgeFee;
         emit BridgeFeeChanged(oldBridgeFee, _bridgeFee);
     }
 
-    /**
-     * @notice ADMIN Change referral earning share
-     * @param _referralEarninBips new referral earning share
-     *
-     * @dev emits {NogemHyper-ReferralEarningBipsChanged}
-     */
     function setReferralEarningBips(
         uint256 _referralEarninBips
     ) external onlyOwner {
@@ -233,13 +172,6 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
         );
     }
 
-    /**
-     * @notice ADMIN Change referral earning share for specific referrer
-     * @param referrer address for which a special share is set
-     * @param earningBips new referral earning share for referrer
-     *
-     * @dev emits {NogemHyper-EarningBipsForReferrerChanged}
-     */
     function setEarningBipsForReferrer(
         address referrer,
         uint256 earningBips
@@ -252,13 +184,6 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
         emit EarningBipsForReferrerChanged(referrer, earningBips);
     }
 
-    /**
-     * @notice ADMIN Change referral earning share for specific referrers
-     * @param referrers addresses for which a special share is set
-     * @param earningBips new referral earning share for referrers
-     *
-     * @dev emits {NogemHyper-EarningBipsForReferrersChanged}
-     */
     function setEarningBipsForReferrersBatch(
         address[] calldata referrers,
         uint256 earningBips
@@ -273,12 +198,6 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
         emit EarningBipsForReferrersChanged(referrers, earningBips);
     }
 
-    /**
-     * @notice ADMIN Change fee collector address
-     * @param _feeCollector new address for the collector
-     *
-     * @dev emits {NogemHyper-FeeCollectorChanged}
-     */
     function setFeeCollector(address _feeCollector) external onlyOwner {
         _validate(_feeCollector != address(0), ERROR_INVALID_COLLECTOR_ADDRESS);
         address oldFeeCollector = feeCollector;
@@ -286,12 +205,6 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
         emit FeeCollectorChanged(oldFeeCollector, _feeCollector);
     }
 
-    /**
-     * @notice ADMIN Change base URI
-     * @param _newTokenBaseURI new URI
-     *
-     * @dev emits {NogemHyper-TokenURIChanged}
-     */
     function setTokenBaseURI(
         string calldata _newTokenBaseURI
     ) external onlyOwner {
@@ -301,37 +214,16 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
         emit TokenURIChanged(oldTokenBaseURI, _newTokenBaseURI);
     }
 
-    /**
-     * @notice ADMIN Lock / unlock base URI
-     * @param locked lock token URI if true, unlock otherwise
-     *
-     * @dev emits {NogemHyper-TokenURILocked}
-     */
     function setTokenBaseURILocked(bool locked) external onlyOwner {
         _validate(tokenBaseURILocked != locked, ERROR_INVALID_URI_LOCK_STATE);
         tokenBaseURILocked = locked;
         emit TokenURILocked(locked);
     }
 
-    /**
-     * @notice Retrieving token URI
-     *
-     * @dev emits {NogemHyper-TokenURILocked}
-     */
     function tokenURI() public view returns (string memory) {
         return _tokenBaseURI;
     }
 
-    /************
-     *   MINT    *
-     ************/
-
-    /**
-     * @notice Mint new L2Portal HypNFT
-     * @dev new token ID must be in range [startMintId - maxMintId]
-     * @dev tx value must be equal to mintFee. See {NogemHyper-mintFee}
-     * @dev emits {NogemHyper-HypNFTMinted}
-     */
     function mint() external payable nonReentrant {
         uint256 newItemId = tokenCounter;
         uint256 feeEarnings = mintFee;
@@ -343,18 +235,10 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
 
         feeEarnedAmount += feeEarnings;
 
-        _safeMint(_msgSender(), newItemId);
+        _mint(_msgSender(), newItemId);
         emit ONFTMinted(_msgSender(), newItemId, feeEarnings, address(0), 0);
     }
 
-    /**
-     * @notice Mint new L2Portal ONFT by referral
-     * @param referrer referral address
-     * @dev new token ID must be in range [startMintId - maxMintId]
-     * @dev tx value must be equal to mintFee. See {NogemHyper-mintFee}
-     * @dev referrer address must be non-zero
-     * @dev emits {NogemHyper-ONFTMinted}
-     */
     function mint(address referrer) public payable nonReentrant {
         uint256 newItemId = tokenCounter;
         uint256 _mintFee = mintFee;
@@ -380,7 +264,7 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
 
         feeEarnedAmount += feeEarnings;
 
-        _safeMint(_msgSender(), newItemId);
+        _mint(_msgSender(), newItemId);
         emit ONFTMinted(
             _msgSender(),
             newItemId,
@@ -389,20 +273,6 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
             referrerEarnings
         );
     }
-
-    /**************
-     *   BRIDGE    *
-     **************/
-
-    /**
-     * @notice Transfers `_amountOrId` token to `_recipient` on `_destination` domain.
-     * @dev Delegates transfer logic to `_transferFromSender` implementation.
-     * @dev Emits `SentTransferRemote` event on the origin chain.
-     * @param _destination The identifier of the destination chain.
-     * @param _recipient The address of the recipient on the destination chain.
-     * @param _amountOrId The amount or identifier of tokens to be sent to the remote recipient.
-     * @return messageId The identifier of the dispatched message.
-     */
 
     function transferRemote(
         uint32 _destination,
@@ -425,16 +295,6 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
         return _messageId;
     }
 
-    /*************
-     *   CLAIM    *
-     *************/
-
-    /**
-     * @notice FEE_COLLECTOR Claim earned fee (mint + bridge)
-     *
-     * @dev earned amount must be more than zero to claim
-     * @dev emits {NogemHyper-FeeEarningsClaimed}
-     */
     function claimFeeEarnings() external onlyFeeCollector nonReentrant {
         uint256 _feeEarnedAmount = feeEarnedAmount;
         _validate(_feeEarnedAmount != 0, ERROR_NOTHING_TO_CLAIM);
@@ -451,12 +311,6 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
         emit FeeEarningsClaimed(_feeCollector, currentEarnings);
     }
 
-    /**
-     * @notice Claim earned fee from referral mint
-     *
-     * @dev earned amount must be more than zero to claim
-     * @dev emits {NogemHyper-ReferrerEarningsClaimed}
-     */
     function claimReferrerEarnings() external {
         uint256 earnings = referrersEarnedAmount[_msgSender()];
         _validate(earnings != 0, ERROR_NOTHING_TO_CLAIM);
@@ -470,34 +324,18 @@ contract NogemHyper is HypERC721, ReentrancyGuard {
         emit ReferrerEarningsClaimed(_msgSender(), earnings);
     }
 
-    /***************
-     *   HELPERS    *
-     ***************/
-
-    /**
-     * @notice Checks if address is current fee collector
-     */
     function _checkFeeCollector() internal view {
         _validate(feeCollector == _msgSender(), ERROR_NOT_FEE_COLLECTOR);
     }
-
-    /**
-     * @notice Mimics the initialize function in HypERC72
-     */
 
     function init(
         string memory _name,
         string memory _symbol
     ) internal initializer {
-        __ERC721_init(_name, _symbol);
+        __ERC20_init(_name, _symbol);
     }
 
-    /**
-     * @notice Checks if the condition is met and reverts with an error if not
-     * @param _clause condition to be checked
-     * @param _errorCode code that will be passed in the error
-     */
     function _validate(bool _clause, uint8 _errorCode) internal pure {
-        if (!_clause) revert L2PortalHypNFT721_CoreError(_errorCode);
+        if (!_clause) revert HypToken_CoreError(_errorCode);
     }
 }
