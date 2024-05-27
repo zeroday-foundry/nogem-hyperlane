@@ -1,0 +1,409 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1029pt" height="886pt" viewBox="0.00 0.00 1028.51 886.00">
+<g id="graph0" class="graph" transform="translate(4,882) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="none" points="-4,4 -4,-882 1024.51,-882 1024.51,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterNogemHyper">
+
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 1000.51,-8 1000.51,-8 1006.51,-8 1012.51,-14 1012.51,-20 1012.51,-20 1012.51,-721 1012.51,-721 1012.51,-727 1006.51,-733 1000.51,-733 1000.51,-733 20,-733 20,-733 14,-733 8,-727 8,-721 8,-721 8,-20 8,-20 8,-14 14,-8 20,-8" style=""/>
+<text text-anchor="middle" x="510.25" y="-716.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">NogemHyper</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="31.52,-741 31.52,-870 405.94,-870 405.94,-741 31.52,-741" style=""/>
+<text text-anchor="middle" x="218.73" y="-853.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- NogemHyper.onlyFeeCollector -->
+<g id="node1" class="node" pointer-events="visible" data-name="NogemHyper.onlyFeeCollector">
+
+<polygon fill="#edad56" stroke="#1bc6a6" stroke-width="3" points="189.05,-300.54 189.05,-315.46 139.53,-326 69.5,-326 19.98,-315.46 19.98,-300.54 69.5,-290 139.53,-290 189.05,-300.54" style=""/>
+<polygon fill="none" stroke="#1bc6a6" stroke-width="3" points="193.05,-297.31 193.05,-318.69 139.95,-330 69.08,-330 15.98,-318.69 15.98,-297.31 69.08,-286 139.95,-286 193.05,-297.31" style=""/>
+<text text-anchor="middle" x="104.52" y="-303.8" font-family="Times,serif" font-size="14.00" style="">onlyFeeCollector</text>
+</g>
+<!-- NogemHyper._checkFeeCollector -->
+<g id="node16" class="node" pointer-events="visible" data-name="NogemHyper._checkFeeCollector">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="370.94" cy="-196" rx="88.02" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-191.8" font-family="Times,serif" font-size="14.00" style="">_checkFeeCollector</text>
+</g>
+<!-- NogemHyper.onlyFeeCollector&#45;&gt;NogemHyper._checkFeeCollector -->
+<g id="edge1" class="edge" data-name="NogemHyper.onlyFeeCollector-&gt;NogemHyper._checkFeeCollector">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M169.26,-290.96C177.72,-287.15 185.91,-282.55 193.03,-277 215.79,-259.28 205,-238.95 229.03,-223 242.05,-214.36 257.15,-208.33 272.53,-204.15" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="273.04,-207.63 281.94,-201.89 271.4,-200.83 273.04,-207.63" style=""/>
+</g>
+<!-- NogemHyper.&lt;Constructor&gt; -->
+<g id="node2" class="node" pointer-events="visible" data-name="NogemHyper.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="104.52" cy="-655" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="104.52" y="-650.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- NogemHyper.init -->
+<g id="node17" class="node" pointer-events="visible" data-name="NogemHyper.init">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="370.94" cy="-682" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-677.8" font-family="Times,serif" font-size="14.00" style="">init</text>
+</g>
+<!-- NogemHyper.&lt;Constructor&gt;&#45;&gt;NogemHyper.init -->
+<g id="edge3" class="edge" data-name="NogemHyper.&lt;Constructor&gt;-&gt;NogemHyper.init">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M169.53,-661.54C219.59,-666.65 287.62,-673.59 330.14,-677.94" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="329.68,-681.41 339.98,-678.94 330.39,-674.44 329.68,-681.41" style=""/>
+</g>
+<!-- NogemHyper.type -->
+<g id="node19" class="node" pointer-events="visible" data-name="NogemHyper.type">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="370.94" cy="-628" rx="27.83" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-623.8" font-family="Times,serif" font-size="14.00" style="">type</text>
+</g>
+<!-- NogemHyper.&lt;Constructor&gt;&#45;&gt;NogemHyper.type -->
+<g id="edge2" class="edge" data-name="NogemHyper.&lt;Constructor&gt;-&gt;NogemHyper.type">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M169.53,-648.46C219.18,-643.39 286.5,-636.52 329.08,-632.17" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="329.38,-635.66 338.97,-631.16 328.67,-628.7 329.38,-635.66" style=""/>
+</g>
+<!-- NogemHyper.setMintFee -->
+<g id="node3" class="node" pointer-events="visible" data-name="NogemHyper.setMintFee">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="104.52" cy="-250" rx="54.48" ry="18" style=""/>
+<text text-anchor="middle" x="104.52" y="-245.8" font-family="Times,serif" font-size="14.00" style="">setMintFee</text>
+</g>
+<!-- NogemHyper.setBridgeFee -->
+<g id="node4" class="node" pointer-events="visible" data-name="NogemHyper.setBridgeFee">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="104.52" cy="-196" rx="61.98" ry="18" style=""/>
+<text text-anchor="middle" x="104.52" y="-191.8" font-family="Times,serif" font-size="14.00" style="">setBridgeFee</text>
+</g>
+<!-- NogemHyper.setReferralEarningBips -->
+<g id="node5" class="node" pointer-events="visible" data-name="NogemHyper.setReferralEarningBips">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="370.94" cy="-412" rx="101.85" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-407.8" font-family="Times,serif" font-size="14.00" style="">setReferralEarningBips</text>
+</g>
+<!-- NogemHyper._validate -->
+<g id="node18" class="node" pointer-events="visible" data-name="NogemHyper._validate">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="620.51" cy="-304" rx="46.36" ry="18" style=""/>
+<text text-anchor="middle" x="620.51" y="-299.8" font-family="Times,serif" font-size="14.00" style="">_validate</text>
+</g>
+<!-- NogemHyper.setReferralEarningBips&#45;&gt;NogemHyper._validate -->
+<g id="edge4" class="edge" data-name="NogemHyper.setReferralEarningBips-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M458.8,-401.84C477.13,-397.93 496.01,-392.51 512.84,-385 542.64,-371.72 571.81,-348.66 592.1,-330.54" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="594.34,-333.23 599.35,-323.89 589.61,-328.07 594.34,-333.23" style=""/>
+</g>
+<!-- NogemHyper.setEarningBipsForReferrer -->
+<g id="node6" class="node" pointer-events="visible" data-name="NogemHyper.setEarningBipsForReferrer">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="370.94" cy="-358" rx="115.74" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-353.8" font-family="Times,serif" font-size="14.00" style="">setEarningBipsForReferrer</text>
+</g>
+<!-- NogemHyper.setEarningBipsForReferrer&#45;&gt;NogemHyper._validate -->
+<g id="edge5" class="edge" data-name="NogemHyper.setEarningBipsForReferrer-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M450.73,-343.75C471.02,-339.85 492.78,-335.46 512.84,-331 530.91,-326.99 550.58,-322.14 568.06,-317.67" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="568.89,-321.07 577.7,-315.18 567.14,-314.29 568.89,-321.07" style=""/>
+</g>
+<!-- NogemHyper.setEarningBipsForReferrersBatch -->
+<g id="node7" class="node" pointer-events="visible" data-name="NogemHyper.setEarningBipsForReferrersBatch">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="370.94" cy="-304" rx="141.81" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-299.8" font-family="Times,serif" font-size="14.00" style="">setEarningBipsForReferrersBatch</text>
+</g>
+<!-- NogemHyper.setEarningBipsForReferrersBatch&#45;&gt;NogemHyper._validate -->
+<g id="edge6" class="edge" data-name="NogemHyper.setEarningBipsForReferrersBatch-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M514.16,-304C530.16,-304 545.75,-304 559.81,-304" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="559.76,-307.5 569.76,-304 559.76,-300.5 559.76,-307.5" style=""/>
+</g>
+<!-- NogemHyper.setFeeCollector -->
+<g id="node8" class="node" pointer-events="visible" data-name="NogemHyper.setFeeCollector">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="370.94" cy="-574" rx="71.78" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-569.8" font-family="Times,serif" font-size="14.00" style="">setFeeCollector</text>
+</g>
+<!-- NogemHyper.setFeeCollector&#45;&gt;NogemHyper._validate -->
+<g id="edge7" class="edge" data-name="NogemHyper.setFeeCollector-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M444.17,-573.34C468.13,-569.9 493.57,-562.38 512.84,-547 579.97,-493.47 605.89,-389.11 615.02,-336.29" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="618.48,-336.85 616.61,-326.42 611.57,-335.74 618.48,-336.85" style=""/>
+</g>
+<!-- NogemHyper.setTokenBaseURI -->
+<g id="node9" class="node" pointer-events="visible" data-name="NogemHyper.setTokenBaseURI">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="370.94" cy="-520" rx="81.67" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-515.8" font-family="Times,serif" font-size="14.00" style="">setTokenBaseURI</text>
+</g>
+<!-- NogemHyper.setTokenBaseURI&#45;&gt;NogemHyper._validate -->
+<g id="edge8" class="edge" data-name="NogemHyper.setTokenBaseURI-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M452.81,-516.63C473.84,-512.65 495.45,-505.5 512.84,-493 567.07,-454.03 597.34,-378.42 610.83,-335.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="614.17,-336.66 613.69,-326.08 607.46,-334.65 614.17,-336.66" style=""/>
+</g>
+<!-- NogemHyper.setTokenBaseURILocked -->
+<g id="node10" class="node" pointer-events="visible" data-name="NogemHyper.setTokenBaseURILocked">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="370.94" cy="-466" rx="110.59" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-461.8" font-family="Times,serif" font-size="14.00" style="">setTokenBaseURILocked</text>
+</g>
+<!-- NogemHyper.setTokenBaseURILocked&#45;&gt;NogemHyper._validate -->
+<g id="edge9" class="edge" data-name="NogemHyper.setTokenBaseURILocked-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M469.31,-456.79C484.57,-452.73 499.64,-447.02 512.84,-439 554.73,-413.57 586.73,-365.3 604.32,-333.9" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="607.22,-335.9 608.9,-325.44 601.06,-332.56 607.22,-335.9" style=""/>
+</g>
+<!-- NogemHyper.tokenURI -->
+<g id="node11" class="node" pointer-events="visible" data-name="NogemHyper.tokenURI">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="104.52" cy="-142" rx="49.24" ry="18" style=""/>
+<text text-anchor="middle" x="104.52" y="-137.8" font-family="Times,serif" font-size="14.00" style="">tokenURI</text>
+</g>
+<!-- NogemHyper.mint -->
+<g id="node12" class="node" pointer-events="visible" data-name="NogemHyper.mint">
+
+<ellipse fill="#ff9797" stroke="brown" stroke-width="3" cx="370.94" cy="-250" rx="28.99" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-245.8" font-family="Times,serif" font-size="14.00" style="">mint</text>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._validate -->
+<g id="edge10" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M383.31,-232.35C407.32,-220.11 464.94,-230.36 512.84,-241 545.71,-248.3 583.87,-258.34 604.47,-275.64" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="601.82,-277.94 611.22,-282.84 606.93,-273.15 601.82,-277.94" style=""/>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._validate -->
+<g id="edge11" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M398,-241.25C426.36,-241.55 472.97,-250.14 512.84,-259 538.91,-264.79 568.31,-272.31 589.64,-280.87" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="588.15,-284.04 598.71,-284.94 591.01,-277.65 588.15,-284.04" style=""/>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._validate -->
+<g id="edge15" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M400.38,-254.94C428.91,-260.02 474.06,-268.38 512.84,-277 530.91,-281.01 550.58,-285.86 568.06,-290.33" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="567.14,-293.71 577.7,-292.82 568.89,-286.93 567.14,-293.71" style=""/>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._validate -->
+<g id="edge16" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M390.25,-264.9C417.2,-275.88 469.08,-285.28 512.84,-295 528.74,-298.53 545.87,-302.7 561.65,-306.03" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="560.51,-309.38 571,-307.9 561.88,-302.51 560.51,-309.38" style=""/>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._validate -->
+<g id="edge17" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M379.92,-268.33C401.45,-291.07 462.51,-301.82 512.84,-313 541.6,-319.39 574.42,-327.88 595.97,-325.75" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="596.55,-329.21 605.41,-323.41 594.86,-322.42 596.55,-329.21" style=""/>
+</g>
+<!-- NogemHyper._safeMint -->
+<g id="node20" class="node" pointer-events="visible" data-name="NogemHyper._safeMint">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="620.51" cy="-250" rx="50.39" ry="18" style=""/>
+<text text-anchor="middle" x="620.51" y="-245.8" font-family="Times,serif" font-size="14.00" style="">_safeMint</text>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._safeMint -->
+<g id="edge12" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._safeMint">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M400.34,-245.51C438.66,-243.09 507.93,-242.61 558.37,-244.09" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="557.94,-247.57 568.05,-244.41 558.18,-240.58 557.94,-247.57" style=""/>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._safeMint -->
+<g id="edge19" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._safeMint">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M400.34,-254.49C438.66,-256.91 507.93,-257.39 558.37,-255.91" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="558.18,-259.42 568.05,-255.59 557.94,-252.43 558.18,-259.42" style=""/>
+</g>
+<!-- NogemHyper._msgSender -->
+<g id="node21" class="node" pointer-events="visible" data-name="NogemHyper._msgSender">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="620.51" cy="-196" rx="58.56" ry="18" style=""/>
+<text text-anchor="middle" x="620.51" y="-191.8" font-family="Times,serif" font-size="14.00" style="">_msgSender</text>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._msgSender -->
+<g id="edge13" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M379.92,-231.67C401.45,-208.93 462.51,-198.18 512.84,-187 541.3,-180.68 573.72,-172.3 595.28,-174.19" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="594.25,-177.54 604.77,-176.36 595.81,-170.72 594.25,-177.54" style=""/>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._msgSender -->
+<g id="edge14" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M390.25,-235.1C417.2,-224.12 469.08,-214.72 512.84,-205 524.35,-202.44 536.5,-199.55 548.32,-196.89" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="549,-200.32 558.02,-194.76 547.5,-193.48 549,-200.32" style=""/>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._msgSender -->
+<g id="edge18" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M400.38,-245.06C428.91,-239.98 474.06,-231.62 512.84,-223 528.66,-219.49 545.71,-215.34 561.43,-211.36" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="561.96,-214.84 570.78,-208.97 560.22,-208.05 561.96,-214.84" style=""/>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._msgSender -->
+<g id="edge20" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M398,-258.75C426.36,-258.45 472.97,-249.86 512.84,-241 538.6,-235.28 567.61,-227.87 588.87,-219.44" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="590.21,-222.67 597.94,-215.43 587.38,-216.27 590.21,-222.67" style=""/>
+</g>
+<!-- NogemHyper.mint&#45;&gt;NogemHyper._msgSender -->
+<g id="edge21" class="edge" data-name="NogemHyper.mint-&gt;NogemHyper._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M383.31,-267.65C407.32,-279.89 464.94,-269.64 512.84,-259 545.55,-251.73 583.5,-241.75 604.16,-224.61" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="606.59,-227.14 610.96,-217.48 601.53,-222.31 606.59,-227.14" style=""/>
+</g>
+<!-- NogemHyper.transferRemote -->
+<g id="node13" class="node" pointer-events="visible" data-name="NogemHyper.transferRemote">
+
+<ellipse fill="#ffbdb9" stroke="brown" stroke-width="3" cx="104.52" cy="-88" rx="70.63" ry="18" style=""/>
+<text text-anchor="middle" x="104.52" y="-83.8" font-family="Times,serif" font-size="14.00" style="">transferRemote</text>
+</g>
+<!-- NogemHyper._transferRemote -->
+<g id="node22" class="node" pointer-events="visible" data-name="NogemHyper._transferRemote">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="370.94" cy="-142" rx="75.28" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-137.8" font-family="Times,serif" font-size="14.00" style="">_transferRemote</text>
+</g>
+<!-- NogemHyper.transferRemote&#45;&gt;NogemHyper._transferRemote -->
+<g id="edge22" class="edge" data-name="NogemHyper.transferRemote-&gt;NogemHyper._transferRemote">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M160.18,-100.27C181.62,-105 206.46,-110.37 229.03,-115 250.86,-119.48 274.63,-124.12 296.33,-128.27" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="295.39,-131.65 305.86,-130.08 296.69,-124.77 295.39,-131.65" style=""/>
+</g>
+<!-- NogemHyper.claimFeeEarnings -->
+<g id="node14" class="node" pointer-events="visible" data-name="NogemHyper.claimFeeEarnings">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="370.94" cy="-34" rx="80.51" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-29.8" font-family="Times,serif" font-size="14.00" style="">claimFeeEarnings</text>
+</g>
+<!-- NogemHyper.claimFeeEarnings&#45;&gt;NogemHyper._validate -->
+<g id="edge23" class="edge" data-name="NogemHyper.claimFeeEarnings-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M452.72,-33.04C474.88,-36.77 497.1,-44.87 512.84,-61 580.83,-130.65 487.23,-201.66 548.84,-277 553.36,-282.53 559.15,-286.93 565.47,-290.42" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="563.93,-293.57 574.48,-294.54 566.84,-287.2 563.93,-293.57" style=""/>
+</g>
+<!-- NogemHyper.payable -->
+<g id="node23" class="node" pointer-events="visible" data-name="NogemHyper.payable">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="620.51" cy="-61" rx="41.13" ry="18" style=""/>
+<text text-anchor="middle" x="620.51" y="-56.8" font-family="Times,serif" font-size="14.00" style="">payable</text>
+</g>
+<!-- NogemHyper.claimFeeEarnings&#45;&gt;NogemHyper.payable -->
+<g id="edge24" class="edge" data-name="NogemHyper.claimFeeEarnings-&gt;NogemHyper.payable">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M445.55,-42.03C484.35,-46.26 531.07,-51.35 566.32,-55.2" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="565.89,-58.67 576.21,-56.28 566.65,-51.71 565.89,-58.67" style=""/>
+</g>
+<!-- NogemHyper.claimReferrerEarnings -->
+<g id="node15" class="node" pointer-events="visible" data-name="NogemHyper.claimReferrerEarnings">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="370.94" cy="-88" rx="98.95" ry="18" style=""/>
+<text text-anchor="middle" x="370.94" y="-83.8" font-family="Times,serif" font-size="14.00" style="">claimReferrerEarnings</text>
+</g>
+<!-- NogemHyper.claimReferrerEarnings&#45;&gt;NogemHyper._validate -->
+<g id="edge26" class="edge" data-name="NogemHyper.claimReferrerEarnings-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M469.73,-91.51C485.74,-96.09 500.96,-103.46 512.84,-115 565.76,-166.38 500.64,-221.17 548.84,-277 553.51,-282.41 559.38,-286.73 565.74,-290.2" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="564.23,-293.36 574.79,-294.29 567.12,-286.98 564.23,-293.36" style=""/>
+</g>
+<!-- NogemHyper.claimReferrerEarnings&#45;&gt;NogemHyper._msgSender -->
+<g id="edge25" class="edge" data-name="NogemHyper.claimReferrerEarnings-&gt;NogemHyper._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M383.8,-68.86C408.75,-53.8 468.03,-59.02 512.84,-79 553.32,-97.05 592.65,-133.12 610.11,-165.23" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="606.84,-166.51 614.23,-174.1 613.19,-163.55 606.84,-166.51" style=""/>
+</g>
+<!-- NogemHyper.claimReferrerEarnings&#45;&gt;NogemHyper._msgSender -->
+<g id="edge27" class="edge" data-name="NogemHyper.claimReferrerEarnings-&gt;NogemHyper._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M466.63,-82.19C482.45,-85.65 498.4,-90.56 512.84,-97 548.73,-113 583.72,-143.17 603.36,-167.01" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="600.36,-168.85 609.19,-174.7 605.94,-164.62 600.36,-168.85" style=""/>
+</g>
+<!-- NogemHyper.claimReferrerEarnings&#45;&gt;NogemHyper._msgSender -->
+<g id="edge28" class="edge" data-name="NogemHyper.claimReferrerEarnings-&gt;NogemHyper._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M457.32,-97.84C476.11,-101.78 495.55,-107.29 512.84,-115 542.46,-128.2 571.46,-151.06 591.73,-169.13" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="589.24,-171.6 598.98,-175.76 593.96,-166.43 589.24,-171.6" style=""/>
+</g>
+<!-- NogemHyper.claimReferrerEarnings&#45;&gt;NogemHyper._msgSender -->
+<g id="edge30" class="edge" data-name="NogemHyper.claimReferrerEarnings-&gt;NogemHyper._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M411.97,-105.72C441,-111.91 480.65,-118.65 512.84,-133 535.57,-143.13 557.93,-158.94 576.26,-172.6" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="574.05,-175.32 584.14,-178.52 578.25,-169.72 574.05,-175.32" style=""/>
+</g>
+<!-- NogemHyper.claimReferrerEarnings&#45;&gt;NogemHyper._msgSender -->
+<g id="edge31" class="edge" data-name="NogemHyper.claimReferrerEarnings-&gt;NogemHyper._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M382.69,-107.23C406.94,-125.65 467.35,-130.71 512.84,-151 529.09,-158.24 545.15,-168.39 559.69,-178.1" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="557.73,-181 567.98,-183.69 561.64,-175.2 557.73,-181" style=""/>
+</g>
+<!-- NogemHyper.claimReferrerEarnings&#45;&gt;NogemHyper.payable -->
+<g id="edge29" class="edge" data-name="NogemHyper.claimReferrerEarnings-&gt;NogemHyper.payable">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M458.53,-78.56C494.4,-74.64 534.86,-70.23 566.25,-66.81" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="566.53,-70.3 576.1,-65.73 565.77,-63.34 566.53,-70.3" style=""/>
+</g>
+<!-- NogemHyper._checkFeeCollector&#45;&gt;NogemHyper._validate -->
+<g id="edge32" class="edge" data-name="NogemHyper._checkFeeCollector-&gt;NogemHyper._validate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M456.99,-201.19C476.51,-205.29 496.35,-212.05 512.84,-223 536.88,-238.95 526.3,-259 548.84,-277 554.7,-281.67 561.45,-285.6 568.4,-288.89" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="566.82,-292.02 577.4,-292.66 569.53,-285.57 566.82,-292.02" style=""/>
+</g>
+<!-- NogemHyper._checkFeeCollector&#45;&gt;NogemHyper._msgSender -->
+<g id="edge33" class="edge" data-name="NogemHyper._checkFeeCollector-&gt;NogemHyper._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M460.27,-196C489.04,-196 520.6,-196 547.98,-196" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="547.63,-199.5 557.63,-196 547.63,-192.5 547.63,-199.5" style=""/>
+</g>
+<!-- NogemHyper.__ERC721_init -->
+<g id="node24" class="node" pointer-events="visible" data-name="NogemHyper.__ERC721_init">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="620.51" cy="-682" rx="71.83" ry="18" style=""/>
+<text text-anchor="middle" x="620.51" y="-677.8" font-family="Times,serif" font-size="14.00" style="">__ERC721_init</text>
+</g>
+<!-- NogemHyper.init&#45;&gt;NogemHyper.__ERC721_init -->
+<g id="edge34" class="edge" data-name="NogemHyper.init-&gt;NogemHyper.__ERC721_init">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M399.38,-682C431.84,-682 487.44,-682 534.64,-682" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="534.36,-685.5 544.36,-682 534.36,-678.5 534.36,-685.5" style=""/>
+</g>
+<!-- NogemHyper.L2PortalHypNFT721_CoreError -->
+<g id="node25" class="node" pointer-events="visible" data-name="NogemHyper.L2PortalHypNFT721_CoreError">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="866.34" cy="-304" rx="138.33" ry="18" style=""/>
+<text text-anchor="middle" x="866.34" y="-299.8" font-family="Times,serif" font-size="14.00" style="">L2PortalHypNFT721_CoreError</text>
+</g>
+<!-- NogemHyper._validate&#45;&gt;NogemHyper.L2PortalHypNFT721_CoreError -->
+<g id="edge35" class="edge" data-name="NogemHyper._validate-&gt;NogemHyper.L2PortalHypNFT721_CoreError">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M668.23,-304C681.84,-304 697.5,-304 713.92,-304" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="713.58,-307.5 723.58,-304 713.58,-300.5 713.58,-307.5" style=""/>
+</g>
+<!-- key -->
+<g id="node26" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="169.52,-837 39.52,-837 39.52,-749 169.52,-749 169.52,-837" style=""/>
+<text text-anchor="start" x="89.15" y="-818.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="85.26" y="-798.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="62.72" y="-778.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="49.12" y="-758.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node27" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="397.94,-837 343.94,-837 343.94,-749 397.94,-749 397.94,-837" style=""/>
+<text text-anchor="start" x="360.94" y="-818.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="360.94" y="-798.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="none" points="358.94,-773 358.94,-793 383.94,-793 383.94,-773 358.94,-773" style=""/>
+<text text-anchor="start" x="360.94" y="-778.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="360.94,-755 360.94,-771 381.94,-771 381.94,-755 360.94,-755" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge36" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M162.52,-823C244.96,-823 268.71,-823 345.19,-823" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="344.91,-826.5 354.91,-823 344.91,-819.5 344.91,-826.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge37" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M162.52,-803C244.96,-803 268.71,-803 345.19,-803" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="344.91,-806.5 354.91,-803 344.91,-799.5 344.91,-806.5" style=""/>
+</g>
+</g>
+</svg>
